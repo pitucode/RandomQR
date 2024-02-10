@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined QR Code Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="max-w-md w-full p-6 bg-white rounded-md shadow-md">
+        <h1 class="text-2xl font-bold mb-4">Combined QR Code Generator</h1>
+        <form id="qrForm">
+            <div class="mb-4">
+                <label for="url" class="block text-sm font-medium text-gray-600">Enter URL/Text for main QR code:</label>
+                <input type="text" id="url" name="url" required
+                    class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:outline-none focus:border-blue-300">
+            </div>
+            <div class="mb-4">
+                <label for="mainQRPosition"
+                    class="block text-sm font-medium text-gray-600">Choose the position for the main QR code (1-6):</label>
+                <select id="mainQRPosition" name="mainQRPosition"
+                    class="mt-1 p-2 block w-full border rounded-md shadow-sm focus:outline-none focus:border-blue-300">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <button type="submit"
+                class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
+                Generate QR Code
+            </button>
+        </form>
+        <div id="result" class="mt-4"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" integrity="sha512-ZDSPMa/JM1D+7kdg2x3BsruQ6T/JpJo3jWDWkCZsP+5yVyp1KfESqLI+7RqB5k24F7p2cV7i2YHh/890y6P6Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="app.js"></script>
+    </div>
+</body>
+
+</html>
